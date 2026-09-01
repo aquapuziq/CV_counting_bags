@@ -44,8 +44,12 @@ test_evaluator = val_evaluator
 
 load_from = r"C:\dev\projects\CV_counting_bags\checkpoints\rtmdet_tiny.pth"
 
+max_epochs = 30
+
 train_cfg = dict(
-    max_epochs = 30,
+    _delete_ = True,
+    type = "EpochBasedTrainLoop",
+    max_epochs = max_epochs,
     val_interval = 1,
 )
 
@@ -57,10 +61,11 @@ optim_wrapper = dict(
 
 default_hooks = dict(
     checkpoint = dict(
+        _delete_ = True,
         type = "CheckpointHook",
         interval = 1,
-        max_step_ckpts = 3,
-        save_best = r"coco\bbox_mAP"
+        max_keep_ckpts = 3,
+        save_best = "coco/bbox_mAP"
     )
 )
 
