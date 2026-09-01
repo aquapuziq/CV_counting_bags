@@ -1,6 +1,6 @@
 _base_ = r"C:\Users\kopchonyPyos\mmdetection\configs\rtmdet\rtmdet_tiny_8xb32-300e_coco.py"
 
-data_root = r"C:\dev\projects\CV_counting_bags\dataset"
+data_root = r"C:\dev\projects\CV_counting_bags\dataset\\"
 work_dir = r"C:\dev\projects\CV_counting_bags\work_dirs\rtmdet_tiny_bag"
 
 metainfo = {
@@ -14,7 +14,7 @@ model = dict(
 )
 
 train_dataloader = dict(
-    bath_size = 2,
+    batсh_size = 2,
     num_workers = 2,
     dataset = dict(
         data_root = data_root,
@@ -25,7 +25,7 @@ train_dataloader = dict(
 )
 
 val_dataloader = dict(
-    bath_size = 1,
+    batсh_size = 1,
     num_workers = 2,
     dataset = dict(
         data_root = data_root,
