@@ -1,0 +1,8 @@
+Model: RTMDet-tiny
+Dataset: 300 annotated frames
+Train/val split: 224 / 76
+Epochs: 30
+Best epoch: 27
+Best coco/bbox_mAP: 0.920
+bbox_mAP_50: 0.999
+bbox_mAP_75: 0.979
