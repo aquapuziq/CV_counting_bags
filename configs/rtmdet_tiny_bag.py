@@ -14,7 +14,7 @@ model = dict(
 )
 
 train_dataloader = dict(
-    batсh_size = 2,
+    batch_size = 2,
     num_workers = 2,
     dataset = dict(
         data_root = data_root,
@@ -25,7 +25,7 @@ train_dataloader = dict(
 )
 
 val_dataloader = dict(
-    batсh_size = 1,
+    batch_size = 1,
     num_workers = 2,
     dataset = dict(
         data_root = data_root,
