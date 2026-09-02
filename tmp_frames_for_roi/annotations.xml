@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <job>
+      <id>4434352</id>
+      <size>2</size>
+      <mode>annotation</mode>
+      <overlap>0</overlap>
+      <bugtracker></bugtracker>
+      <created>2026-09-02 07:28:42.808269+00:00</created>
+      <updated>2026-09-02 07:30:49.076375+00:00</updated>
+      <subset>default</subset>
+      <start_frame>0</start_frame>
+      <stop_frame>1</stop_frame>
+      <frame_filter></frame_filter>
+      <segments>
+        <segment>
+          <id>4431917</id>
+          <start>0</start>
+          <stop>1</stop>
+          <url>https://app.cvat.ai/api/jobs/4434352/dataset/export/api/jobs/4434352</url>
+        </segment>
+      </segments>
+      <owner>
+        <username>jorgan</username>
+        <email>jorgankorpi@gmail.com</email>
+      </owner>
+      <assignee></assignee>
+      <labels>
+        <label>
+          <name>conveyor</name>
+          <color>#ff007c</color>
+          <type>polygon</type>
+          <attributes>
+          </attributes>
+        </label>
+      </labels>
+    </job>
+    <dumped>2026-09-02 07:31:49.784367+00:00</dumped>
+  </meta>
+  <image id="0" name="frame_0052.jpg" width="640" height="360">
+    <polygon label="conveyor" source="manual" occluded="0" points="0.00,360.00;318.12,42.68;431.94,51.96;310.70,360.00" z_order="0">
+    </polygon>
+  </image>
+  <image id="1" name="frame_0168.jpg" width="640" height="360">
+    <polygon label="conveyor" source="manual" occluded="0" points="0.31,360.00;313.30,44.70;484.10,75.70;307.51,360.00" z_order="0">
+    </polygon>
+  </image>
+</annotations>
