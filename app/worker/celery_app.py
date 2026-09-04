@@ -4,7 +4,7 @@ celery_app = Celery(
     "bag_counter",
     broker = "redis://localhost:6379/0",
     backend = "redis://localhost:6379/1",
-    include=["app.worker.tasks"],
+    include = ["app.worker.tasks"],
 )
 
 celery_app.conf.update(
