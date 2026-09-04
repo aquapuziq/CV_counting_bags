@@ -38,7 +38,7 @@ async def create_job(video: UploadFile = File(...), db: Session = Depends(get_db
 
     suffix = Path(video.filename).suffix.lower()
 
-    if suffix not in ".mp4":
+    if suffix != ".mp4":
         raise HTTPException(
             status_code = 400,
             detail = "Unsupp video format"
@@ -135,14 +135,14 @@ def download_result(job_id: str, db: Session = Depends(get_db)):
 
     out_path = Path(job.out_path)
 
-    if not out_path.exist():
+    if not out_path.exists():
         raise HTTPException(
             status_code = 404,
             detail = "Output video not found"
         )
 
     return FileResponse(
-        path = output_path,
+        path = out_path,
         filename = f"{job_id}.mp4"
     )
 
