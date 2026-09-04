@@ -46,7 +46,7 @@ services:
       -A app.worker.celery_app.celery_app
       worker
       --loglevel=info
-      --concurrency=1
+      --pool=solo
 
     volumes:
       - ./data:/app/data
