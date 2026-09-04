@@ -7,6 +7,7 @@ from sqlalchemy.orm import Session
 from app.db.database import get_db
 from app.db.models import Anomaly, Job
 from app.schemas import AnomalyResponse, JobCreateResponse, JobResponse, JobStatus
+from app.worker.tasks import process_video_task
 
 
 router = APIRouter(
@@ -72,6 +73,8 @@ async def create_job(video: UploadFile = File(...), db: Session = Depends(get_db
 
     db.add(job)
     db.commit()
+
+    process_video_task.delay(job_id)
 
     return JobCreateResponse(
         job_id = job.id,
