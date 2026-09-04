@@ -1,7 +1,7 @@
-_base_ = r"C:\Users\kopchonyPyos\mmdetection\configs\rtmdet\rtmdet_tiny_8xb32-300e_coco.py"
+_base_ = "./base/rtmdet_tiny_8xb32-300e_coco.py"
 
-data_root = r"C:\dev\projects\CV_counting_bags\dataset\\"
-work_dir = r"C:\dev\projects\CV_counting_bags\work_dirs\rtmdet_tiny_bag"
+data_root = "dataset/"
+work_dir = "work_dirs/rtmdet_tiny_bag"
 
 metainfo = {
     "classes": ("bag",),
@@ -42,7 +42,7 @@ val_evaluator = dict(
 test_dataloader = val_dataloader
 test_evaluator = val_evaluator
 
-load_from = r"C:\dev\projects\CV_counting_bags\checkpoints\rtmdet_tiny.pth"
+load_from = None
 
 max_epochs = 30
 

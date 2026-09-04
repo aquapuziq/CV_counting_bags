@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+python-multipart
+
+celery
+redis
+
+numpy==1.26.4
+opencv-python-headless==4.10.0.84
+
+mmengine==0.10.7
+mmdet==3.3.0

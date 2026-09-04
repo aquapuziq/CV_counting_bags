@@ -1,9 +1,9 @@
 from mmdet.apis import init_detector
 from pathlib import Path
 
-config_path = Path(r"configs\rtmdet_tiny_bag.py")
-ckpt_path = Path(r"work_dirs\rtmdet_tiny_bag\best_coco_bbox_mAP_epoch_27.pth")
-
+pr_root = Path(__file__).resolve().parents[2]
+config_path = pr_root / "configs" / "rtmdet_tiny_bag.py"
+ckpt_path = pr_root / "checkpoints" / "best_coco_bbox_mAP_epoch_27.pth"
 def load_model():
     return init_detector(
     str(config_path),
