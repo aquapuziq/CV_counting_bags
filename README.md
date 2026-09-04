@@ -250,7 +250,7 @@ GET /jobs/{job_id}
 
 ```json
 {
-  "status": "DONE"
+  "status": "done"
 }
 ```
 
