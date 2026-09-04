@@ -1,4 +1,4 @@
-_base_ = "./base/rtmdet_tiny_8xb32-300e_coco.py"
+_base_ = "./base/mmdetection/configs/rtmdet/rtmdet_tiny_8xb32-300e_coco.py"
 
 data_root = "dataset/"
 work_dir = "work_dirs/rtmdet_tiny_bag"
